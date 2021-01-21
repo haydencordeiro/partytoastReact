@@ -16,8 +16,8 @@ function App() {
     <BrowserRouter>
     <Navbar></Navbar>
     <Switch>
-      <Route component={Home} path='/' exact />
-      <Route component={ProductDetails} path='/product/:slug' exact />
+      <Route component={ProductDetails} path='/product/:slug'  />
+      <Route component={Home} path='/'  />
     </Switch>
     <Footer></Footer>
     </BrowserRouter>
