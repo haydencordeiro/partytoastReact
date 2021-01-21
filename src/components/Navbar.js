@@ -6,9 +6,9 @@ export default function Product(){
         <nav>
         <img src="cake.jpg" alt="" className="logo" />
         <h1 className="name">Party Toast</h1>
-        <NavLink to="/product/1" exact>
+        {/* <NavLink to="/product/1" exact>
         Product
-        </NavLink>
+        </NavLink> */}
         <NavLink to="/" exact>
         Home
         </NavLink>
