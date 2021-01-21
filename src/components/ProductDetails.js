@@ -9,18 +9,26 @@ export default function ProductDetails(){
     const [desc,Setdesc]=useState('');
     
     useEffect(()=>{
-        // console.log(slug)
+        console.log(slug,'slug')
         client.getEntries({
           'content_type': 'product',
-          'slug':{slug},
+        
 
         })
         .then((response)=>{
-          setProductsDetails(response.items[0].fields)
-            setProductsDetailsUrl(response.items[0].fields.productImage.fields.file.url);
-            console.log(ProductDetails.description);
-            Setdesc(marked(response.items[0].fields.description));
-      
+            var temp=response.items;
+            var response=[]
+            for(var i in temp){
+                if(temp[i].fields.slug==slug){
+                response=(temp[i])
+                }
+            }
+            
+          setProductsDetails(response.fields)
+            setProductsDetailsUrl(response.fields.productImage.fields.file.url);
+            // console.log(ProductDetails.description);
+            Setdesc(marked(response.fields.description));
+            // console.log(response);
         
         })
       

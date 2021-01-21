@@ -1,8 +1,7 @@
 {
  
   "name": "partytoast",
-  "homepage": "https://quizzical-murdock-9a242d.netlify.app/",
-
+  "homepage" : "http://partytoast.tk/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
