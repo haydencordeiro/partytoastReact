@@ -13,7 +13,7 @@ function App() {
 
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Navbar></Navbar>
     <Switch>
       <Route exact component={ProductDetails} path='/product/:slug'  />
